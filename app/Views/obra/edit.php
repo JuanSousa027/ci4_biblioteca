@@ -11,7 +11,7 @@
     </div>
     <div class="row p-2">
         <div class="col-2">
-            <label for="nome">Nome</label>
+            <label for="nome">Nome:</label>
         </div>
         <div class="col-10">
             <input value='<?=$usuario['nome']?>'class='form-control' type="text" id='nome' name='nome'>
