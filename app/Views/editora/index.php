@@ -8,7 +8,7 @@
     <table class="table">
         <thead>
         <tr>
-            <td>ID_usuario</td>
+            <td>ID</td>
             <td>NOME</td>
             <td>EMAIL</td>
             <td>TELEFONE</td>

@@ -18,6 +18,9 @@
         <li class="nav-item">
           <?=anchor("Editora/index","Editora",['class' => 'nav-link active',])?>
         </li>
+        <li class="nav-item">
+          <?=anchor("Obra/index","Obra",['class' => 'nav-link active',])?>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown

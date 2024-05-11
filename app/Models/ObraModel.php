@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Obra extends Model
+class ObraModel extends Model
 {
-    protected $table            = 'obras';
+    protected $table            = 'obra';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['titulo','isbn','categoria','ano_publicacao','id_editora'];
 
     protected bool $allowEmptyInserts = false;
 
