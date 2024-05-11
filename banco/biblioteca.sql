@@ -26,6 +26,7 @@ CREATE TABLE editora
 CREATE TABLE obra 
 ( 
  id INT PRIMARY KEY AUTO_INCREMENT,  
+ titulo VARCHAR(500) NOT NULL,
  isbn VARCHAR(25) NOT NULL,  
  categoria VARCHAR(15) NOT NULL,  
  ano_publicacao INT NOT NULL,  
