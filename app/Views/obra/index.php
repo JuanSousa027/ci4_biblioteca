@@ -73,7 +73,7 @@
                 </div>         
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
                 <button type="submit" class="btn btn-dark">Cadastrar</button>
             </div>
             </div>

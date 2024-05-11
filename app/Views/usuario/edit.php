@@ -53,7 +53,7 @@
             Você tem certeza que deseja excluir: <br>ID: <?=$usuario['id']?><br>Nome: <?=$usuario['nome']?><br>Email: <?=$usuario['email']?><br>Telefone: <?=$usuario['telefone']?>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
         </div>

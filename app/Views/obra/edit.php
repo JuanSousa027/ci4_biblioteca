@@ -83,7 +83,7 @@
             Você tem certeza que deseja excluir: <br>Titulo: <?=$obra['titulo']?><br>Categoria: <?=$obra['categoria']?><br>Ano: <?=$obra['ano_publicacao']?><br>ISBN: <?=$obra['isbn']?><br> Editora: <?=$obra['id_editora']?>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
         </div>
@@ -111,7 +111,7 @@
                 </div>         
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
                 <button type="submit" class="btn btn-dark">Cadastrar</button>
             </div>
             </div>

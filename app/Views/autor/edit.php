@@ -36,7 +36,7 @@
         <div class="modal-body">
             Você tem certeza que deseja excluir: <br>ID: <?=$autor['id']?><br>Nome: <?=$autor['nome']?>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
         </div>

@@ -72,6 +72,7 @@
                 <div class="form-group">
                     <label for="turma">Turma:</label>
                     <select class='form-control' name="turma" id="turma">
+                        <option hidden>Selecione Uma Turma...</option>
                         <option value="1A">1A</option>
                         <option value="1B">1B</option>
                         <option value="1C">1C</option>

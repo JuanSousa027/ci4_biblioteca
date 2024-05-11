@@ -78,7 +78,7 @@
             Você tem certeza que deseja excluir: <br>ID: <?=$aluno['id']?><br>CPF: <?=$aluno['cpf']?><br>Nome: <?=$aluno['nome']?><br>Email: <?=$aluno['email']?><br>Telefone: <?=$aluno['telefone']?><br> Turma: <?=$aluno['turma']?>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
         </div>
