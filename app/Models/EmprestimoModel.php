@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Emprestimo extends Model
+class EmprestimoModel extends Model
 {
-    protected $table            = 'emprestimos';
+    protected $table            = 'emprestimo';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['data_inicio','data_fim','data_prazo','id_livro','id_aluno','id_usuario'];
 
     protected bool $allowEmptyInserts = false;
 

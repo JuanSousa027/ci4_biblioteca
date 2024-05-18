@@ -21,6 +21,12 @@
         <li class="nav-item">
           <?=anchor("Obra/index","Obra",['class' => 'nav-link active',])?>
         </li>
+        <li class="nav-item">
+          <?=anchor("Livro/index","Livro",['class' => 'nav-link active', 'aria-current'=>'page',])?>
+        </li>
+        <li class="nav-item">
+          <?=anchor("Emprestimo/index","Emprestimo",['class' => 'nav-link active', 'aria-current'=>'page',])?>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
