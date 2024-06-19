@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Usuário</h2>
+    <h2>Usuario</h2>
         <!-- Button do Modal -->
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Novo
@@ -51,6 +51,10 @@
                 <div class="form-group">
                     <label for="e-mail">Email:</label>
                     <input class='form-control' type="text" id='email' name='email'>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input class='form-control' type="text" id='senha' name='senha'>
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone:</label>

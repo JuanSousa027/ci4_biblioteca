@@ -1,5 +1,5 @@
 <div class="container p-4">
-    <img src="<?=base_url("assets/img/logoeep.jpg")?>"  class="float-end me-3 img-thumbnail"> 
+    <img src="<?=base_url("assets/img/logo.avif")?>"  class="float-end me-3 img-thumbnail"> 
 <head>
     <style>
         body, html{
@@ -17,7 +17,7 @@
     <div class="conteudo-centralizado">
         <div class="container p-4">
             <center>
-                <h2>Bem-Vindo a Biblioteca EEEP Walter Ramos de Araújo!</h2>
+                <h2>Bem-Vindo a Biblioteca!</h2>
                 <a class="btn btn-dark" href="/index.php/Aluno/index" role="button">Aluno</a> 
                 <a class="btn btn-dark" href="/index.php/Autor/index" role="button">Autor</a>
                 <a class="btn btn-dark" href="/index.php/Usuario/index" role="button">Usuário</a> 
