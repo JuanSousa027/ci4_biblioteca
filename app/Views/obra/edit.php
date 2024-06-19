@@ -3,7 +3,7 @@
     <input value='<?=$obra['id']?>'class='form-control' type="hidden" id='id' name='id'>
     <div class="row p-2">
         <div class="col-2">
-            <label for="nome">Titulo</label>
+            <label for="nome">Título</label>
         </div>
         <div class="col-10">
             <input value='<?=$obra['titulo']?>'class='form-control' type="text" id='titulo' name='titulo'>

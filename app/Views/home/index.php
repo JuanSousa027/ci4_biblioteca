@@ -1,4 +1,5 @@
 <div class="container p-4">
+    <img src="<?=base_url("assets/img/logo.avif")?>"  class="float-end me-3 img-thumbnail"> 
 <head>
     <style>
         body, html{

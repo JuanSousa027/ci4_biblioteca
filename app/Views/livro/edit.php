@@ -3,7 +3,7 @@
     <input value='<?=$livro['id']?>' class='form-control' type="hidden" id='id' name='id'>
     <div class="row p-2">
         <div class="col-2">
-            <label for="nome">Disponivel:</label>
+            <label for="nome">Disponível:</label>
         </div>
         <div class="col-10">
             <input value='<?=$livro['disponivel']?>'class='form-control' type="text" id='disponivel' name='disponivel'>
@@ -55,7 +55,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            Você tem certeza que deseja excluir: <br>ID: <?=$livro['id']?><br>Disponivel: <?=$livro['disponivel']?><br>Status: <?=$livro['status']?><br> Obra: <?=$livro['id_obra']?>
+            Você tem certeza que deseja excluir: <br>ID: <?=$livro['id']?><br>Disponível: <?=$livro['disponivel']?><br>Status: <?=$livro['status']?><br> Obra: <?=$livro['id_obra']?>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

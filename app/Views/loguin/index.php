@@ -1,9 +1,9 @@
 
 <div class="container">
     <div class="row">
-            <center><h1>Seja Bem-vindo a Bibliotaca da EEEP Walter Ramos</h1> <br></center>
+            <center><h1>Seja Bem-vindo a Bibliotaca!</h1> <br></center>
         <div class="col-md-4 offset-md-4">
-            <h2>Faça Login Para Continuar</h2>
+            <center><h3>Login</h3></center>
             <?php if (session()->has('error')): ?>
                 <div class="alert alert-danger">
                     <?= session()->get('error') ?>

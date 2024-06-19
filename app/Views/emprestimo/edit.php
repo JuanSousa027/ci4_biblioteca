@@ -8,7 +8,7 @@
     ?>
     <div class="row p-2">
         <div class="col-2">
-            <label for="data_inicio">Data de Inicio:</label>
+            <label for="data_inicio">Data de Início:</label>
         </div>
         <div class="col-10">
             <input value="<?=$emprestimo['data_inicio']?>" class='form-control' type="date" id='data_inicio' name='data_inicio'>
@@ -64,7 +64,7 @@
     </div>
     <div class="row p-2">
         <div class="col-2">
-            <label for="telefone">Usuario:</label>
+            <label for="telefone">Usuário:</label>
         </div>
         <div class="col-10">
             <select class='form-select' name="id_usuario" id="id_usuario" required>
@@ -99,7 +99,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            Você tem certeza que deseja excluir: <br>Data de Inicio: <?=$emprestimo['data_inicio']?><br>Data do Fim:: <?=$emprestimo['data_fim']?><br>Data do Prazo:: <?=$emprestimo['data_prazo']?><br>Livro: <?=$emprestimo['id_livro']?><br> Aluno: <?=$emprestimo['id_aluno']?><br> Usuario: <?=$emprestimo['id_usuario']?>
+            Você tem certeza que deseja excluir: <br>Data de Início: <?=$emprestimo['data_inicio']?><br>Data do Fim:: <?=$emprestimo['data_fim']?><br>Data do Prazo:: <?=$emprestimo['data_prazo']?><br>Livro: <?=$emprestimo['id_livro']?><br> Aluno: <?=$emprestimo['id_aluno']?><br> Usuário: <?=$emprestimo['id_usuario']?>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

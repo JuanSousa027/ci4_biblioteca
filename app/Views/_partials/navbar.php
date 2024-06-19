@@ -13,7 +13,7 @@
         <?=anchor("Autor/index","Autor",['class' => 'nav-link active'])?>
         </li>
         <li class="nav-item">
-        <?=anchor("Usuario/index","Usuario",['class' => 'nav-link active'])?>
+        <?=anchor("Usuario/index","Usuário",['class' => 'nav-link active'])?>
         </li>
         <li class="nav-item">
           <?=anchor("Editora/index","Editora",['class' => 'nav-link active',])?>

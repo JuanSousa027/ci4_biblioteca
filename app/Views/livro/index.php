@@ -9,7 +9,7 @@
         <thead>
         <tr>
             <td>ID</td>
-            <td>DISPONIVEL</td>
+            <td>DISPONÍVEL</td>
             <td>STATUS</td>
             <td>OBRA</td>
         </tr>
@@ -50,7 +50,7 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="disponivel">Disponivel:</label>
+                    <label for="disponivel">Disponível:</label>
                     <input class='form-control' type="text" id='disponivel' name='disponivel'>
                 </div>
                 <div class="form-group">

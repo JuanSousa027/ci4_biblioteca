@@ -9,7 +9,7 @@
         <thead>
         <tr>
             <td>ID</td>
-            <td>TITULO</td>
+            <td>TÍTULO</td>
             <td>CATEGORIA</td>
             <td>ANO</td>
             <td>ISBN</td>

@@ -12,12 +12,12 @@
         <thead>
         <tr>
             <td>ID</td>
-            <td>DATA DE INICIO</td>
+            <td>DATA DE INÍCIO</td>
             <td>DATA DO FIM</td>
             <td>DATA DO PRAZO</td>
             <td>LIVRO</td>
             <td>ALUNO</td>
-            <td>USUARIO</td>
+            <td>USUÁRIO</td>
         </tr>
         </thead>
         <tbody>
