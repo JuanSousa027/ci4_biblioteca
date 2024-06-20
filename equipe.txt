@@ -2,3 +2,9 @@
 
 Juan Carlos Sousa Silva 
 João Arthur Rodrigues Pessoa 
+
+*login*
+usuario: admin  
+senha: admin
+
+senha mestre: admin123
