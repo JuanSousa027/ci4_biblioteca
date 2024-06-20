@@ -1,38 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Negrito */
+        }
+    </style>
+</head>
+</html>
+
+
 <div class="container">
-    <h2>Editora</h2>
-        <!-- Button do Modal -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Novo
-        </button>
-        <!-- Tabela de Usuario -->
-    <table class="table">
-        <thead>
-        <tr>
-            <td>ID</td>
-            <td>NOME</td>
-            <td>EMAIL</td>
-            <td>TELEFONE</td>
-        </tr>
-        </thead>
-        <tbody>
-        <?php foreach($listaEditora as $e) :?>
-                <tr>
-                    <td>
-                        <?=$e['id']?>
-                    </td>
-                    <td>
-                        <?=anchor("Editora/editar/".$e['id'],$e['nome'])?>
-                    </td>
-                    <td>
-                        <?=$e['email']?>
-                    </td>
-                    <td>
-                        <?=$e['telefone']?>
-                    </td>
-                </tr>
-            <?php endforeach ?>  
-        </tbody>
-    </table>
+    <h2 class="text-light">Editoras</h2>
+    <!-- Button do Modal -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Novo
+    </button>
+
+    <!-- Blocos de Editoras -->
+    <div class="row mt-3">
+        <?php foreach ($listaEditora as $e) : ?>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= anchor("Editora/editar/".$e['id'], $e['nome']) ?></h5>
+                        <p class="card-text">ID: <?= $e['id'] ?></p>
+                        <p class="card-text">Email: <?= $e['email'] ?></p>
+                        <p class="card-text">Telefone: <?= $e['telefone'] ?></p>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

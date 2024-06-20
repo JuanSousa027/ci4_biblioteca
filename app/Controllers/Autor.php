@@ -9,9 +9,11 @@ use App\Models\AutorModel;
 class Autor extends BaseController
 {
     private $autorModel;
+    protected $session;
     
     public function __construct(){
         $this->autorModel = new AutorModel();
+        $this->session = \Config\Services::session();
     }
 
     public function index(){
@@ -20,6 +22,13 @@ class Autor extends BaseController
         echo view('_partials/navbar');
         echo view('autor/index.php',['listaAutor' => $dados]);
         echo view('_partials/footer');
+
+        if ($this->session->has('logged_in')) {
+            $data['nome'] = $this->session->get('nome');
+        } else {
+            return redirect()->to(base_url('login'));
+        }
+
     }
 
     public function cadastrar(){

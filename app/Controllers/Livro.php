@@ -11,10 +11,12 @@ class Livro extends BaseController
 {
     private $obraModel;
     private $livroModel;
+    protected $session;
 
     public function __construct(){
         $this->obraModel = new ObraModel();
         $this->livroModel = new LivroModel();
+        $this->session = \Config\Services::session();
     }
 
     public function index(){
@@ -24,6 +26,12 @@ class Livro extends BaseController
         echo view('_partials/navbar');
         echo view('livro/index.php',['listaObra'=>$obra,'listaLivro'=>$livro]);
         echo view('_partials/footer');
+
+        if ($this->session->has('logged_in')) {
+            $data['nome'] = $this->session->get('nome');
+        } else {
+            return redirect()->to(base_url('login'));
+        }
     }
 
     public function editar($id){

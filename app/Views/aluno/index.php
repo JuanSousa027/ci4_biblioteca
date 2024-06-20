@@ -1,48 +1,64 @@
-<div class="container">
-    <h2>Aluno</h2>
-        <!-- Button do Modal -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Novo
-        </button>
-        <!-- Tabela de Usuario -->
-    <table class="table">
-        <thead>
-        <tr>
-            <td>ID</td>
-            <td>NOME</td>
-            <td>CPF</td>
-            <td>EMAIL</td>
-            <td>TELEFONE</td>
-            <td>TURMA</td>
-        </tr>
-        </thead>
-        <tbody>
-        <?php foreach($listaAlunos as $au) :?>
-                <tr>
-                    <td>
-                        <?=$au['id']?>
-                    </td>
-                    <td>
-                        <?=anchor("Aluno/editar/".$au['id'],$au['nome'])?>
-                    </td>
-                    <td>
-                        <?=$au['cpf']?>
-                    </td>
-                    <td>
-                        <?=$au['email']?>
-                    </td>
-                    <td>
-                        <?=$au['telefone']?>
-                    </td>
-                    <td>
-                        <?=$au['turma']?>
-                    </td>
-                    
-                </tr>
-            <?php endforeach ?>  
-        </tbody>
-    </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Negrito */
+        }
+    </style>
+    <script>
+        function formatarCPF() {
+            // Obtém o valor atual do campo CPF
+            var cpf = document.getElementById('cpf').value;
+            
+            // Remove caracteres não numéricos
+            cpf = cpf.replace(/\D/g, '');
+            
+            // Aplica a formatação
+            cpf = cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
+            
+            // Atualiza o valor no campo
+            document.getElementById('cpf').value = cpf;
+        }
+    </script>
+</head>
+</html>
 
+
+<div class="container">
+    <h2 class="text-light">Alunos</h2>
+    <!-- Button do Modal -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Novo
+    </button>
+
+    <!-- Blocos de Alunos -->
+    <div class="row mt-3">
+        <?php foreach ($listaAlunos as $au) : ?>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= anchor("Aluno/editar/".$au['id'], $au['nome']) ?></h5>
+                        <p class="card-text">ID: <?= $au['id'] ?></p>
+                        <p class="card-text">CPF: <?= $au['cpf'] ?></p>
+                        <p class="card-text">Email: <?= $au['email'] ?></p>
+                        <p class="card-text">Telefone: <?= $au['telefone'] ?></p>
+                        <p class="card-text">Turma: <?= $au['turma'] ?></p>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+            
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1D" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <?=form_open("Aluno/cadastrar")?> 
@@ -54,9 +70,9 @@
             </div>
             <div class="modal-body">
             <div class="form-group">
-                    <label for="cpf">CPF:</label>
-                    <input class='form-control' type="text" id='cpf' name='cpf'>
-                </div>
+    <label for="cpf">CPF:</label>
+    <input class='form-control' type="text" id='cpf' name='cpf' oninput="formatarCPF()" maxlength="11">
+</div>
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input class='form-control' type="text" id='nome' name='nome'>

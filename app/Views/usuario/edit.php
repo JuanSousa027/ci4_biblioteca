@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário - Editar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Negrito */
+        }
+    </style>
+</head>
+</html>
+
+
 <div class="container p-5">
     <?=form_open('Usuario/salvar')?>
     <input value='<?=$usuario['id']?>'class='form-control' type="hidden" id='id' name='id'>
@@ -19,18 +39,18 @@
     </div>
     <div class="row p-2">
         <div class="col-2">
-            <label for="telefone">Telefone</label>
+            <label for="telefone">Senha</label>
         </div>
         <div class="col-10">
-            <input value='<?=$usuario['telefone']?>'class='form-control' type="text" id='telefone' name='telefone'>
+            <input value='<?=$usuario['senha']?>'class='form-control' type="text" id='senha' name='senha'>
         </div>
     </div>
     <div class="row p-4">
         <div class="col">
             <div class="btn-group w-100" role="group">
-                <a href='http://localhost:8080/index.php/Usuario/index'class="btn btn-outline-secondary">Cancelar</a>
-                <button type="submit" class="btn btn-outline-success">Salvar</button>
-                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a href='http://localhost:8080/index.php/Usuario/index'class="btn btn-dark">Cancelar</a>
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Excluir
                 </button>
             </div>

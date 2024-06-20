@@ -8,9 +8,11 @@ use App\Models\AlunoModel;
 
 class Aluno extends BaseController{   
     private $alunoModel;
+    protected $session;
     
     public function __construct(){
         $this->alunoModel = new AlunoModel();
+        $this->session = \Config\Services::session();
     }
     
     public function index(){
@@ -19,6 +21,14 @@ class Aluno extends BaseController{
         echo view('_partials/navbar');
         echo view('aluno/index.php',['listaAlunos' => $dados]);
         echo view('_partials/footer');
+
+
+        if ($this->session->has('logged_in')) {
+            $data['nome'] = $this->session->get('nome');
+            $nome = $this->session->get('nome');
+        } else {
+            return redirect()->to(base_url('login'));
+        }
     }
 
     public function cadastrar(){

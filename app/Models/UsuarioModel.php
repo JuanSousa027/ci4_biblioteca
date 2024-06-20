@@ -40,3 +40,4 @@ class UsuarioModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 }
+

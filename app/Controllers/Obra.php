@@ -15,12 +15,14 @@ class Obra extends BaseController
     private $editoraModel;
     private $autorModel;
     private $autorObraModel;
+    protected $session;
     
     public function __construct(){
         $this->editoraModel = new EditoraModel();
         $this->obraModel = new ObraModel();
         $this->autorModel = new AutorModel();
         $this->autorObraModel = new AutorObraModel();
+        $this->session = \Config\Services::session();
     }
     
     public function index(){
@@ -30,6 +32,13 @@ class Obra extends BaseController
         echo view('_partials/navbar');
         echo view('obra/index.php',['listaObra'=>$obra,'listaEditora'=>$editora]);
         echo view('_partials/footer');
+
+        if ($this->session->has('logged_in')) {
+            $data['nome'] = $this->session->get('nome');
+        } else {
+            return redirect()->to(base_url('login'));
+        }
+
     }
 
     public function cadastrar(){

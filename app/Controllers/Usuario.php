@@ -8,9 +8,11 @@ use App\Models\UsuarioModel;
 
 class Usuario extends BaseController{
     private $usuarioModel;
+    protected $session;
     
     public function __construct(){
         $this->usuarioModel = new UsuarioModel();
+        $this->session = \Config\Services::session();
     }
     
     public function index(){
@@ -19,10 +21,17 @@ class Usuario extends BaseController{
         echo view('_partials/navbar');
         echo view('usuario/index.php',['listaUsuarios' => $dados]);
         echo view('_partials/footer');
+
+        if ($this->session->has('logged_in')) {
+            $data['nome'] = $this->session->get('nome');
+        } else {
+            return redirect()->to(base_url('login'));
+        }
     }
 
     public function cadastrar(){
-        $usuario = $this->request->getPost();   
+        $usuario = $this->request->getPost();
+        $usuario['senha']= md5("senhaforte");
         $this->usuarioModel->save($usuario);
         return redirect()->to('Usuario/index');
     }

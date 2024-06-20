@@ -9,9 +9,11 @@ use App\Models\EditoraModel;
 class Editora extends BaseController
 {
     private $editoraModel;
+    protected $session;
     
     public function __construct(){
         $this->editoraModel = new EditoraModel();
+        $this->session = \Config\Services::session();
     }
     
     public function index(){
@@ -20,6 +22,12 @@ class Editora extends BaseController
         echo view('_partials/navbar');
         echo view('editora/index.php',['listaEditora' => $dados]);
         echo view('_partials/footer');
+        
+        if ($this->session->has('logged_in')) {
+            $data['nome'] = $this->session->get('nome');
+        } else {
+            return redirect()->to(base_url('login'));
+        }
     }
 
     public function cadastrar(){
